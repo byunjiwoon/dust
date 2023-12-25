@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttergame/const/colors.dart';
+import 'package:fluttergame/core/colors.dart';
 
 class MainDrawer extends StatelessWidget {
   @override

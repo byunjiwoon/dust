@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttergame/const/colors.dart';
+import 'package:fluttergame/core/colors.dart';
 
 class MainAppBar extends StatelessWidget {
   @override
@@ -26,7 +26,7 @@ class MainAppBar extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Image.asset('asset/img/profile.png'),
+                Image.asset('asset/images/profile.png'),
                 const SizedBox(
                   height: 20,
                 ),

@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:fluttergame/presentation/screen/home_screen.dart';
+import 'package:fluttergame/features/splash/presentation/bloc/intro_bloc.dart';
+import 'package:fluttergame/features/splash/presentation/screens/intro_screen.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(MaterialApp(
-    theme: ThemeData(
+import 'di.dart';
 
-    ),
-    home: HomeScreen()
-  ));
+void main() async {
+  await init();
+  runApp(const MyApp());
 }
 
-class SplashScreen extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Hello Word2'),
+    return MultiProvider(
+      providers: [
+        Provider<IntroBloc>(create: (context) => getIt<IntroBloc>())
+      ],
+      child: MaterialApp(
+        home: IntroScreen(),
       ),
     );
   }
